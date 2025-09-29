@@ -36,9 +36,11 @@ fun Screen1() {
                 Modifier.fillMaxSize()
             )
 
-            Column(Modifier
-                .padding(horizontal = 45.dp, vertical = 80.dp)
-                .fillMaxSize()) {
+            Column(
+                Modifier
+                    .padding(horizontal = 45.dp, vertical = 80.dp)
+                    .fillMaxSize()
+            ) {
                 Text(
                     text = "Welcome Back!",
                     fontSize = 40.sp,

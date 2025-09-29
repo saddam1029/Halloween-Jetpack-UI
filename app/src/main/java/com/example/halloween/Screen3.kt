@@ -1,4 +1,4 @@
-package com.example.jetcompose.GlowGreen
+package com.example.halloween
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -27,35 +28,32 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.halloween.R
 
 @Composable
-fun Screen2() {
+fun Screen3() {
     Column(
         Modifier
             .fillMaxSize()
             .background(Color(0xFFE6E7E2))
     ) {
 
-        Spacer(modifier = Modifier.height(110.dp))
+        Spacer(modifier = Modifier.height(50.dp))
 
         Image(
-            painter = painterResource(R.drawable.plants),
+            painter = painterResource(R.drawable.singleplant),
             contentDescription = null,
             modifier = Modifier
-                .fillMaxWidth(),
-            contentScale = ContentScale.FillWidth
+                .fillMaxWidth()
+                .size(280.dp),
         )
 
-//        Spacer(modifier = Modifier.height(110.dp))
-
         Column(
-            Modifier.padding(horizontal = 45.dp, vertical = 90.dp),
+            Modifier.padding(start = 45.dp, end = 45.dp, bottom = 80.dp, top = 20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Discover Your Type of Plant",
-                fontSize = 35.sp,
+                text = "Connect With Other\nPlant Lovers",
+                fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(0xFF2E7547),
                 textAlign = TextAlign.Center
@@ -64,7 +62,7 @@ fun Screen2() {
             Spacer(modifier = Modifier.height(40.dp))
 
             Text(
-                text = "Tips & Tricks to grow a\nhealthy plant",
+                text = "Join a Community",
                 fontSize = 22.sp,
                 color = Color(0xFF2E7547),
                 textAlign = TextAlign.Center
@@ -74,14 +72,12 @@ fun Screen2() {
 
             Button(
                 onClick = {},
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 35.dp),
+                Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(18.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2E7547))
             ) {
                 Text(
-                    text = "Continue",
+                    text = "Create Account",
                     fontSize = 30.sp
                 )
             }
@@ -92,6 +88,6 @@ fun Screen2() {
 
 @Preview
 @Composable
-fun Preview2() {
-    Screen2()
+fun Preview3() {
+    Screen3()
 }
