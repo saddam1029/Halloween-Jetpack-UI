@@ -44,7 +44,7 @@ fun Screen2() {
             contentDescription = null,
             modifier = Modifier
                 .fillMaxWidth(),
-            contentScale = ContentScale.FillWidth
+            contentScale = ContentScale.Crop
         )
 
 //        Spacer(modifier = Modifier.height(110.dp))

@@ -43,8 +43,8 @@ fun Screen3() {
             painter = painterResource(R.drawable.singleplant),
             contentDescription = null,
             modifier = Modifier
-                .fillMaxWidth()
-                .size(280.dp),
+                .fillMaxWidth(),
+            contentScale = ContentScale.Crop
         )
 
         Column(

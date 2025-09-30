@@ -13,6 +13,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -25,57 +26,53 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun Screen1() {
-    Column(
-        Modifier.fillMaxSize()
+    Box(Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(R.drawable.welcome_page_background),
+            contentDescription = null,
+            Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
 
-    ) {
-        Box(Modifier.fillMaxSize()) {
-            Image(
-                painter = painterResource(R.drawable.welcome_page_background),
-                contentDescription = null,
-                Modifier.fillMaxSize()
+        Column(
+            Modifier
+                .padding(horizontal = 45.dp, vertical = 80.dp)
+                .fillMaxSize()
+        ) {
+            Text(
+                text = "Welcome Back!",
+                fontSize = 40.sp,
+                color = Color(0xFF2E7547),
+                fontWeight = FontWeight.Bold,
+                maxLines = 1
+
             )
 
-            Column(
+            Spacer(Modifier.height(15.dp))
+
+            Text(
+                text = "we're glad that that\nyou are here..!!",
+                fontSize = 20.sp,
+                fontStyle = FontStyle.Italic,
+                color = Color(0xFF2E7547),
+                maxLines = 1
+            )
+
+            Spacer(modifier = Modifier.weight(1f)) // Pushes everything below to the bottom
+
+
+            Button(
+                onClick = {},
                 Modifier
-                    .padding(horizontal = 45.dp, vertical = 80.dp)
-                    .fillMaxSize()
+                    .fillMaxWidth()
+                    .height(60.dp),
+                shape = RoundedCornerShape(18.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2E7547))
             ) {
                 Text(
-                    text = "Welcome Back!",
-                    fontSize = 40.sp,
-                    color = Color(0xFF2E7547),
-                    fontWeight = FontWeight.Bold,
-                    maxLines = 1
-
+                    text = "Lets get started",
+                    fontSize = 30.sp
                 )
-
-                Spacer(Modifier.height(15.dp))
-
-                Text(
-                    text = "we're glad that that\nyou are here..!!",
-                    fontSize = 20.sp,
-                    fontStyle = FontStyle.Italic,
-                    color = Color(0xFF2E7547),
-                    maxLines = 1
-                )
-
-                Spacer(modifier = Modifier.weight(1f)) // Pushes everything below to the bottom
-
-
-                Button(
-                    onClick = {},
-                    Modifier
-                        .fillMaxWidth()
-                        .height(60.dp),
-                    shape = RoundedCornerShape(18.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2E7547))
-                ) {
-                    Text(
-                        text = "Lets get started",
-                        fontSize = 30.sp
-                    )
-                }
             }
         }
     }
