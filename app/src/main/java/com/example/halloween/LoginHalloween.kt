@@ -157,7 +157,9 @@ fun LoginHalloween(navController: NavController) {
         Spacer(Modifier.weight(0.35f))
 
         Button(
-            onClick = {},
+            onClick = {
+                navController.navigate("forgetPassword")
+            },
             Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = light_green)
         ) {
@@ -197,9 +199,7 @@ fun LoginHalloween(navController: NavController) {
         Spacer(Modifier.weight(0.35f))
 
         Button(
-            onClick = {
-                navController.navigate("signup")
-            },
+            onClick = {},
             Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD0D0D0)),
 

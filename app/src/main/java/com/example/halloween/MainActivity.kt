@@ -33,6 +33,10 @@ class MainActivity : ComponentActivity() {
                 composable("logIn"){
                     LoginHalloween(navController)
                 }
+
+                composable("forgetPassword") {
+                    ForgetPasswordHalloween(navController)
+                }
             }
 
         }
