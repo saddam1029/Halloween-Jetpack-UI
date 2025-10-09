@@ -13,7 +13,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
@@ -57,9 +59,10 @@ fun SignUpHalloween(navController: NavController) {
         Modifier
             .fillMaxSize()
             .padding(horizontal = 25.dp, vertical = 20.dp)
+            .verticalScroll(rememberScrollState())
             .background(color = Color.White)
     ) {
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.weight(0.3f))
 
         Row(
             Modifier.fillMaxWidth(),
@@ -67,7 +70,7 @@ fun SignUpHalloween(navController: NavController) {
             Icon(
                 painter = painterResource(R.drawable.back),
                 contentDescription = null,
-                Modifier.size(20.dp),
+                Modifier.size(25.dp),
                 tint = Color(0xFF464646)
             )
         }
@@ -91,7 +94,7 @@ fun SignUpHalloween(navController: NavController) {
             color = light_gray
         )
 
-        Spacer(Modifier.height(40.dp))
+        Spacer(Modifier.weight(0.4f))
 
         OutlinedTextField(
             value = email,
@@ -117,7 +120,7 @@ fun SignUpHalloween(navController: NavController) {
 
         )
 
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.weight(0.15f))
 
         OutlinedTextField(
             value = name,
@@ -142,7 +145,7 @@ fun SignUpHalloween(navController: NavController) {
             )
         )
 
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.weight(0.15f))
 
         OutlinedTextField(
             value = number,
@@ -167,7 +170,7 @@ fun SignUpHalloween(navController: NavController) {
             )
         )
 
-        Spacer(Modifier.height(30.dp))
+        Spacer(Modifier.weight(0.45f))
 
         Text(
             buildAnnotatedString {
@@ -192,7 +195,7 @@ fun SignUpHalloween(navController: NavController) {
         )
 
 
-        Spacer(Modifier.height(35.dp))
+        Spacer(Modifier.weight(0.4f))
 
         Button(
             onClick = {
@@ -206,7 +209,7 @@ fun SignUpHalloween(navController: NavController) {
             )
         }
 
-        Spacer(Modifier.height(25.dp))
+        Spacer(Modifier.weight(1f))
 
         Text(
 //            text = "Are you a familiar spirit? Log In again and join our\n" +
