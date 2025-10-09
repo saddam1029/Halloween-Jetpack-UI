@@ -94,7 +94,7 @@ fun SignUpHalloween(navController: NavController) {
                 .fillMaxWidth()   // 80% of screen width
         )
 
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.weight(0.4f))
 
         Text(
             text = "Sign Up",
@@ -249,7 +249,7 @@ fun SignUpHalloween(navController: NavController) {
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, device = "id:pixel_3")
 @Composable
 fun PreviewSignUp() {
     val navController = rememberNavController()

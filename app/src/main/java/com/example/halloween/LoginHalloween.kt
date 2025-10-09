@@ -53,7 +53,7 @@ fun LoginHalloween(navController: NavController) {
             .padding(horizontal = 25.dp, vertical = 20.dp)
             .background(color = Color.White)
     ) {
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.weight(0.3f))
 
         Row(
             Modifier.fillMaxWidth(),
@@ -61,7 +61,7 @@ fun LoginHalloween(navController: NavController) {
             Icon(
                 painter = painterResource(R.drawable.back),
                 contentDescription = null,
-                Modifier.size(20.dp),
+                Modifier.size(25.dp),
                 tint = Color(0xFF464646)
             )
         }
@@ -77,7 +77,7 @@ fun LoginHalloween(navController: NavController) {
                 .align(Alignment.CenterHorizontally) // Optional: Center horizontally
         )
 
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.weight(0.4f))
 
         Text(
             text = "Login",
@@ -86,7 +86,7 @@ fun LoginHalloween(navController: NavController) {
             color = light_gray
         )
 
-        Spacer(Modifier.height(40.dp))
+        Spacer(Modifier.weight(0.55f))
 
         OutlinedTextField(
             value = email,
@@ -95,7 +95,8 @@ fun LoginHalloween(navController: NavController) {
             label = {
                 Text(
                     text = "email ID",
-                    color = light_gray
+                    color = light_gray,
+                    fontSize = 12.sp
                 )
             },
             leadingIcon = {
@@ -109,10 +110,9 @@ fun LoginHalloween(navController: NavController) {
                 focusedBorderColor = Color(0xFFC9C9C9),
                 unfocusedBorderColor = Color(0xFFC9C9C9)
             )
-
         )
 
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.weight(0.15f))
 
         OutlinedTextField(
             value = password,
@@ -121,7 +121,8 @@ fun LoginHalloween(navController: NavController) {
             label = {
                 Text(
                     text = "Password",
-                    color = light_gray
+                    color = light_gray,
+                    fontSize = 12.sp
                 )
             },
             shape = RoundedCornerShape(10.dp),
@@ -143,17 +144,17 @@ fun LoginHalloween(navController: NavController) {
             )
         )
 
-        Spacer(Modifier.height(15.dp))
+        Spacer(Modifier.weight(0.2f))
 
         Text(
             text = "Forget Password?",
             Modifier.align(Alignment.End),
             fontWeight = FontWeight.Bold,
             color = light_green,
-            fontSize = 18.sp
+            fontSize = 15.sp
         )
 
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.weight(0.35f))
 
         Button(
             onClick = {},
@@ -165,7 +166,7 @@ fun LoginHalloween(navController: NavController) {
             )
         }
 
-        Spacer(Modifier.height(25.dp))
+        Spacer(Modifier.weight(0.40f))
 
         Row(
             Modifier.fillMaxWidth(),
@@ -193,7 +194,7 @@ fun LoginHalloween(navController: NavController) {
             )
         }
 
-        Spacer(Modifier.height(25.dp))
+        Spacer(Modifier.weight(0.35f))
 
         Button(
             onClick = {
@@ -220,7 +221,7 @@ fun LoginHalloween(navController: NavController) {
 
         }
 
-        Spacer(Modifier.height(25.dp))
+        Spacer(Modifier.weight(1f))
 
         Text(
 //           text = "Heritage we seen you around hare before",
@@ -241,7 +242,7 @@ fun LoginHalloween(navController: NavController) {
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, device = "id:pixel_3")
 @Composable
 fun Preview() {
     val navController = rememberNavController()
