@@ -60,7 +60,7 @@ fun ForgetPasswordHalloween(navController: NavController) {
                 painter = painterResource(R.drawable.back),
                 contentDescription = null,
                 tint = Color(0xFF464646),
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(25.dp)
             )
         }
 
@@ -101,7 +101,8 @@ fun ForgetPasswordHalloween(navController: NavController) {
             label = {
                 Text(
                     text = "email ID / Mobile Number",
-                    color = light_gray
+                    color = light_gray,
+                    fontSize = 12.sp
                 )
             },
             shape = RoundedCornerShape(10.dp),

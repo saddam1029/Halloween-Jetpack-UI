@@ -59,7 +59,8 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.8.3") // ✅ Correct one
 
-    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.35.2-beta")
+
 
 
 }
